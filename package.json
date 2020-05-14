@@ -6,8 +6,16 @@
   "scripts": {
     "test": "jest"
   },
+  "repository": {
+      "type": "git",
+      "url": "git+https://github.com/zlypher/debug-log-loader.git"
+  },
   "author": "Thomas Prochazka <thomas.prochazka@gmail.com>",
   "license": "MIT",
+  "bugs": {
+      "url": "https://github.com/zlypher/debug-log-loader/issues"
+  },
+  "homepage": "https://github.com/zlypher/debug-log-loader#readme",
   "devDependencies": {
     "babel-jest": "^26.0.1",
     "babel-preset-env": "^1.7.0",
