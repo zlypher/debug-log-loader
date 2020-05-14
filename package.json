@@ -1,13 +1,13 @@
 {
   "name": "debug-log-loader",
   "version": "0.0.1",
-  "description": "",
+  "description": "Debug Log Loader for webpack",
   "main": "index.js",
   "scripts": {
     "test": "jest"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Thomas Prochazka <thomas.prochazka@gmail.com>",
+  "license": "MIT",
   "devDependencies": {
     "babel-jest": "^26.0.1",
     "babel-preset-env": "^1.7.0",
