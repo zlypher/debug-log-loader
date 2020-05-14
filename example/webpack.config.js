@@ -10,6 +10,12 @@ module.exports = {
         use: [
           {
             loader: path.resolve("../src/debug-log-loader.js"),
+            options: {
+              include: "include",
+              exclude: "exclude",
+              output: "dir/",
+              name: "[name].debug[ext]",
+            },
           },
         ],
       },
