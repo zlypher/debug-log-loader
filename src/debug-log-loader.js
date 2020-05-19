@@ -51,9 +51,13 @@ function loader(source) {
 
   // #4 Construct output file name
   const { name, ext } = path.parse(resourcePath);
-  const outputFile = options.name.replace("[name]", name).replace("[ext]", ext);
+  const outputFilename = options.name
+    .replace("[name]", name)
+    .replace("[ext]", ext);
+  const outputFile = path.resolve(options.output, outputFilename);
 
   // #5 Write debug output to file
+  fs.mkdirSync(options.output, { recursive: true });
   fs.writeFileSync(outputFile, source);
 
   return `export default ${JSON.stringify(source)}`;
