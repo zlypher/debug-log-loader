@@ -21,14 +21,23 @@ const schema = {
   },
 };
 
+const defaultOptions = {
+  name: "[name].debug[ext]",
+  output: "debug",
+};
+
 function debugEnabled(filePath, include, exclude) {
+  if (!include && !exclude) {
+    return true;
+  }
+
   return true;
 }
 
 // https://webpack.js.org/contribute/writing-a-loader/
 function loader(source) {
   // #1 Validate that options are correct
-  const options = getOptions(this);
+  const options = { ...defaultOptions, ...getOptions(this) };
   validateOptions(schema, options, { name: "Debug Log Loader" });
 
   // #2 Get current filename
