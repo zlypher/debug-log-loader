@@ -7,13 +7,13 @@
     "test": "jest"
   },
   "repository": {
-      "type": "git",
-      "url": "git+https://github.com/zlypher/debug-log-loader.git"
+    "type": "git",
+    "url": "git+https://github.com/zlypher/debug-log-loader.git"
   },
   "author": "Thomas Prochazka <thomas.prochazka@gmail.com>",
   "license": "MIT",
   "bugs": {
-      "url": "https://github.com/zlypher/debug-log-loader/issues"
+    "url": "https://github.com/zlypher/debug-log-loader/issues"
   },
   "homepage": "https://github.com/zlypher/debug-log-loader#readme",
   "devDependencies": {
@@ -25,6 +25,7 @@
   },
   "dependencies": {
     "loader-utils": "^2.0.0",
+    "micromatch": "^4.0.2",
     "schema-utils": "^2.6.6"
   }
 }

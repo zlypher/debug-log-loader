@@ -2,7 +2,10 @@ const path = require("path");
 
 module.exports = {
   mode: "development",
-  entry: "./main.js",
+  entry: {
+    main: "./main.js",
+    test: "./test.js",
+  },
   module: {
     rules: [
       {
@@ -12,10 +15,10 @@ module.exports = {
           {
             loader: path.resolve("../src/debug-log-loader.js"),
             options: {
-              include: "include",
-              exclude: "exclude",
-              output: "dir/",
-              name: "[name].debug[ext]",
+              // include: "include",
+              exclude: "test.js",
+              // output: "dir/",
+              // name: "[name].debug[ext]",
             },
           },
           {

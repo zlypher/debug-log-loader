@@ -1,5 +1,6 @@
 const fs = require("fs");
 const path = require("path");
+const micromatch = require("micromatch");
 const { getOptions } = require("loader-utils");
 const validateOptions = require("schema-utils");
 
@@ -29,6 +30,14 @@ const defaultOptions = {
 function debugEnabled(filePath, include, exclude) {
   if (!include && !exclude) {
     return true;
+  }
+
+  if (!!exclude && micromatch.contains(filePath, exclude)) {
+    return false;
+  }
+
+  if (!!include && !micromatch.contains(filePath, include)) {
+    return false;
   }
 
   return true;
